@@ -66,6 +66,9 @@ apt-get -y upgrade
 apt-get install -y php php-cli php-pgsql
 apt-get -y install "postgresql-$PG_VERSION" "postgresql-contrib-$PG_VERSION"
 
+# Locale settings
+echo "LC_ALL=en_US.UTF-8" >> /etc/environment
+
 PG_CONF="/etc/postgresql/$PG_VERSION/main/postgresql.conf"
 PG_HBA="/etc/postgresql/$PG_VERSION/main/pg_hba.conf"
 PG_DIR="/var/lib/postgresql/$PG_VERSION/main"
