@@ -6,7 +6,7 @@
 	while (1) {
 		$notify = pg_get_notify($dbconn);
 		if (!$notify) {
-			echo "No messages\n";
+			echo "No messages on channel 'chat_room_1'\n";
 		} else {
 			print_r($notify);
 		}
